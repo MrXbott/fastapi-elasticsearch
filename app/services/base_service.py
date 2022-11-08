@@ -3,6 +3,9 @@
 class BaseService:
     @classmethod
     def _create_query_string(cls, search_params:dict, multi:bool) -> dict:
+        '''
+        Creates and returns a search query based on the given params
+        '''
         if not search_params:
             query = {
                 'match_all': {}

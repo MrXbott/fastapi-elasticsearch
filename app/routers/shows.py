@@ -2,13 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from http import HTTPStatus
 from services.show_service import NetflixShowService
 from models.model import NetflixShow
-# from ..dependencies import get_token_header
 
 
 router = APIRouter(
     prefix="/shows",
     tags=["shows"],
-    # dependencies=[Depends(get_token_header)],
     responses={404: {"description": "Not found"}},
 )
 
